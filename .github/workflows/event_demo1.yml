@@ -3,6 +3,16 @@ on:
   pull_request:
     types: opened
 
+  workflow_dispatch:
+  
+  push:
+    branches:  #[main, 'dev-*']
+      - main # main branch
+      - 'dev-*' # dev-new dev-this-is-dev
+      - 'feat/**' # feat/new feat/new/button
+    paths-ignore:
+      - '.github/workflows/**' # ignore changes in workflow files
+
 jobs:
   demo-job:
     runs-on: ubuntu-latest
