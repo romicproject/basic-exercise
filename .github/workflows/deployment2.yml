@@ -1,5 +1,5 @@
 name: Deployment Ex_2
-on: push
+on: workflow_dispatch
 
 jobs:
   checkout:
